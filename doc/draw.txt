@@ -1,0 +1,9 @@
+*draw.txt*  Draw using inkscape and insert directly into document.
+
+==============================================================================
+Use nnoremap mapping <leader>dw to launch inkscape and draw figure.
+
+Set directory and default template. 
+    let g:im_dir = "./figures"
+    let g:inkscape_template = "default.svg"
+==============================================================================
