@@ -10,3 +10,11 @@ endif
 if !hasmapto('Draw')
   nnoremap <unique> <leader>dw :Draw 
 endif
+
+if !exists('EditDrawing')
+  :command! -nargs=1 -buffer EditDrawing call draw#EditDrawing(<f-args>)
+endif
+
+if !hasmapto('EditDrawing')
+  nnoremap <unique> <leader>de :EditDrawing 
+endif

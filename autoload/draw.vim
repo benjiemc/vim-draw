@@ -17,6 +17,12 @@ function! s:Draw(im_name)
     exe 'redraw!'
 endfunction
 
+function! draw#EditDrawing(im_name)
+    exe ":silent !inkscape ". g:im_dir. "/". a:im_name. ".svg"
+    exe ":silent !inkscape --export-filename=". g:im_dir. "/". a:im_name. ".png ". g:im_dir. "/". a:im_name. ".svg"
+    exe 'redraw!'
+endfunction
+
 function! draw#DrawMD(im_name)
     call s:Draw(a:im_name)
     exe "normal! o![". a:im_name. "](". g:im_dir. "/". a:im_name. ".png)"
