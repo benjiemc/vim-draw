@@ -1,14 +1,17 @@
 *draw.txt*  Draw using inkscape and insert directly into document.
 
 ==============================================================================
-Mappings:
+MAPPINGS                                                       *draw-mappings*
+
 <leader>dw
     shortcut for :Draw command
 
 <leader>de
     shortcut for :EditDrawing command
 
-Commands:
+==============================================================================
+COMMANDS                                                       *draw-commands*
+
 :Draw {name}
     launch inkscape and draw figure, inserting appropriate syntax for the
     image to the document
@@ -16,9 +19,17 @@ Commands:
 :EditDrawing {name}
     edit drawing using inkscape
 
-                                                               *draw-settings*
+==============================================================================
+SETTINGS                                                       *draw-settings*
+
 Set directory and default template.
-    let g:im_dir = "./figures"
+>
+    let g:im_dir = "figures"
+<
+NOTE: The directory name should not contain any beginning or trailing `/`s
+>
     let g:inkscape_template = "default.svg"
+<
+The files can be edited in the `~/.config/inkscape/templates` directory
 
 ==============================================================================
